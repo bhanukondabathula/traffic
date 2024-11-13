@@ -1,0 +1,45 @@
+.traffic-light {
+    width: 60px;
+    background-color: aliceblue;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.light {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: #f0f0f0; /* Light gray color for inactive lights */
+    transition: background-color 0.5s ease, opacity 0.5s ease;
+}
+
+/* Active colors for each light */
+.light-red {
+    background-color: red; /* Full red when active */
+    opacity: 1;
+}
+
+.light-yellow {
+    background-color: yellow; /* Full yellow when active */
+    opacity: 1;
+}
+
+.light-green {
+    background-color: green; /* Full green when active */
+    opacity: 1;
+}
+
+/* Inactive state with lighter colors */
+.light:not(.light-red):not(.light-yellow):not(.light-green) {
+    background-color: #ffcccc; /* Light red for inactive red light */
+}
+.light:not(.light-yellow):not(.light-red):not(.light-green) {
+    background-color: #ffffcc; /* Light yellow for inactive yellow light */
+}
+.light:not(.light-green):not(.light-red):not(.light-yellow) {
+    background-color: #ccffcc; /* Light green for inactive green light */
+}
+
